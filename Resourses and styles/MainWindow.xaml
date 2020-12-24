@@ -1,0 +1,33 @@
+﻿<Window x:Class="Resourses_and_styles.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Resourses_and_styles"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="450">
+
+    <Grid Style="{StaticResource ResourceKey=MainStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Коэффициэнт A" TextWrapping="Wrap" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="coeffA" Text="" Grid.Column="2" VerticalAlignment="Center" Margin="10" Style="{StaticResource ResourceKey=MainStyle}"/>
+        <Button x:Name="btn" Grid.Row="2" Grid.Column="1" Content="Посчитать" Click="Btn_Click" Background="{StaticResource ResourceKey=resButtonBackColor}"
+            Foreground="{StaticResource ResourceKey=resButtonFontColor}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Margin="34,28,26,213"/>
+        <TextBlock x:Name="tblItog" Text="" TextWrapping="Wrap" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4"/>
+        <TextBlock Text="Коэффициэнт B" TextWrapping="Wrap" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="86,44,85,82" Grid.RowSpan="2"/>
+        <TextBox x:Name="coeffB" Text="" Grid.Column="2" VerticalAlignment="Center" Margin="10,43,10,81" Style="{StaticResource ResourceKey=MainStyle}" Grid.RowSpan="2"/>
+        <TextBlock Text="Коэффициэнт C" TextWrapping="Wrap" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="86,25,85,51"/>
+        <TextBox x:Name="coeffC" Text="" Grid.Column="2" VerticalAlignment="Center" Margin="10,24,10,50" Style="{StaticResource ResourceKey=MainStyle}" Grid.Row="1"/>
+        <TextBlock Text="" x:Name="resOut" TextWrapping="Wrap" Grid.Row="1" Grid.ColumnSpan="4" Margin="34,66,36,241" Height="62" Grid.RowSpan="2"/>
+    </Grid>
+</Window>
